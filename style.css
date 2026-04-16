@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --bg: #020617;
     --text: #f1f5f9;
@@ -19,6 +23,7 @@ body {
     padding: 0;
     line-height: 1.6;
     min-height: 100vh;
+    overflow-x: hidden; /* Prevents side-scrolling during 3D flip animations */
 }
 
 /* --- HEADER --- */
@@ -390,5 +395,91 @@ footer {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* --- FLIP BACK BUTTON --- */
+.flip-back-btn {
+    margin-top: auto;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text);
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    align-self: center;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    margin-bottom: 5px;
+}
+
+.flip-back-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.flip-back-btn i {
+    font-size: 0.8rem;
+    color: var(--accent-blue);
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    header {
+        padding: 40px 20px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .featured-showcase {
+        padding: 30px 10px;
+        border-radius: 20px;
+    }
+
+    .carousel-card.side {
+        display: none; /* Hide side cards to focus on the active one */
+    }
+
+    .carousel-card.active {
+        width: 100%;
+        height: 450px;
+        max-width: 350px; /* Limits size on larger tablets */
+    }
+
+    .card-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .cat-grid {
+        grid-template-columns: 1fr; /* Single column layout for profiles */
+        padding: 0 20px; /* Provides breathing room for the 3D rotation swing */
+    }
+
+    .cat-card {
+        min-height: 500px; /* Ensure enough room for medical history on mobile */
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Stabilization: Disable the lift effect on mobile to maintain perfect alignment during flip */
+    .cat-card:hover .card-inner {
+        transform: none;
+    }
+
+    .cat-card.is-flipped:hover .card-inner {
+        transform: rotateY(180deg);
     }
 }
