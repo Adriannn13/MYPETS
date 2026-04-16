@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Feline Hierarchy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:italic,wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>MY CATS</h1>
+        <p>Eight souls, three families, one home.</p>
+    </header>
+
+    <div class="container">
+        
+        <section class="featured-showcase">
+            <h2 class="section-title light">Featured Moments</h2>
+            
+            <div class="carousel-container">
+                <div class="carousel-card side">
+                    <img src="images/want.jpg" alt="Want">
+                    <div class="overlay"></div>
+                </div>
+
+                <div class="carousel-card active">
+                    <img src="images/more.jpg" alt="More">
+                    <div class="card-info">
+                        <h3>The Matriarch</h3>
+                        <p>More was already the queen of the house — solving hierarchy problems before they ever surfaced.</p>
+                    </div>
+                    <div class="overlay"></div>
+                </div>
+
+                <div class="carousel-card side">
+                    <img src="images/kojic.jpg" alt="Kojic">
+                    <div class="overlay"></div>
+                </div>
+
+                <button class="nav-btn prev-btn" onclick="plusSlides(-1)">&#10094;</button>
+                <button class="nav-btn next-btn" onclick="plusSlides(1)">&#10095;</button>
+            </div>
+
+            <div class="dot-container">
+                <span class="dot active-dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </section>
+
+        <section class="hierarchy-section">
+            <h2 class="section-title">More Family</h2>
+            <div class="cat-grid">
+                <article class="cat-card matriarch" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/more.jpg" alt="More" class="cat-photo">
+                            <div class="card-content">
+                                <span class="badge">Mother</span>
+                                <h3>More</h3>
+                                <p class="breed">Puspin</p>
+                                <p class="desc">Nonchalant</p>
+                                <div class="meta"><b>Born:</b> Jan 2023 | <b>Sex:</b> Female</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h4>Medical Profile</h4>
+                            <ul class="medical-history">
+                                <li><i class="fas fa-syringe"></i> Vaccinations Updated</li>
+                                <li><i class="fas fa-check-circle"></i> Spayed (2023)</li>
+                                <li><i class="fas fa-weight"></i> Weight: 4.5kg</li>
+                                <li><i class="fas fa-stethoscope"></i> Last Checkup: Dec 2024</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cat-card" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/three3.jpg" alt="Three" class="cat-photo">
+                            <div class="card-content">
+                                <h3>Three</h3>
+                                <p class="breed">Puspin</p>
+                                <p class="desc">Malambing man to</p>
+                                <div class="meta"><b>Born:</b> Mar 2024 | <b>Sex:</b> Male</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h4>Health Details</h4>
+                            <ul class="medical-history">
+                                <li><i class="fas fa-syringe"></i> Dewormed</li>
+                                <li><i class="fas fa-shield-alt"></i> Anti-Rabies Shot</li>
+                                <li><i class="fas fa-heartbeat"></i> Heartworm Preventative</li>
+                                <li><i class="fas fa-fish"></i> Diet: Wet & Dry Mix</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cat-card" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/one1.jpg" alt="One" class="cat-photo">
+                            <div class="card-content">
+                                <h3>One</h3>
+                                <p class="breed">Puspin</p>
+                                <p class="desc">Panay akyat sa cabinet nabagsakan nako sa ulo ng lagayan ng gamot haha</p>
+                                <div class="meta"><b>Born:</b> Mar 2024 | <b>Sex:</b> Female</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h4>Vital Information</h4>
+                            <ul class="medical-history">
+                                <li><i class="fas fa-syringe"></i> FVRCP Vaccine Done</li>
+                                <li><i class="fas fa-paw"></i> Active & Athletic</li>
+                                <li><i class="fas fa-first-aid"></i> Recovery: Minor Fall 2024</li>
+                                <li><i class="fas fa-leaf"></i> Allergy: None</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="hierarchy-section">
+            <h2 class="section-title">Want Family</h2>
+            <div class="cat-grid">
+                <article class="cat-card want-clan" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/want.jpg" alt="Want" class="cat-photo">
+                            <div class="card-content">
+                                <span class="badge" style="background: var(--accent-purple);">Mother</span>
+                                <h3>Want</h3>
+                                <p class="breed">Puspin</p>
+                                <p class="desc">Puro iwas din akala di family haha</p>
+                                <div class="meta"><b>Born:</b> June 2023 | <b>Sex:</b> Female</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h4>Medical Profile</h4>
+                            <ul class="medical-history">
+                                <li><i class="fas fa-syringe"></i> Booster Shots Done</li>
+                                <li><i class="fas fa-check-circle"></i> Spayed (2024)</li>
+                                <li><i class="fas fa-weight"></i> Weight: 3.8kg</li>
+                                <li><i class="fas fa-notes-medical"></i> Vitamin Supplements</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cat-card want-clan" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/george.jpg" alt="George" class="cat-photo">
+                            <div class="card-content">
+                                <h3>George</h3>
+                                <p class="breed">Puspin</p>
+                                <p class="desc">Nonchalant na malambing</p>
+                                <div class="meta"><b>Born:</b> Dec 2024 | <b>Sex:</b> Male</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h4>Health Details</h4>
+                            <ul class="medical-history">
+                                <li><i class="fas fa-syringe"></i> First Kitten Shots</li>
+                                <li><i class="fas fa-bug"></i> Flea & Tick Treatment</li>
+                                <li><i class="fas fa-bone"></i> Calcium Supps</li>
+                                <li><i class="fas fa-stethoscope"></i> Growth Check: OK</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="hierarchy-section">
+            <h2 class="section-title">The Adopted Crew</h2>
+            <div class="cat-grid">
+                <article class="cat-card adopted" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/nge.jpg" alt="Kojic" class="cat-photo">
+                            <div class="card-content">
+                                <h3>Kojic</h3>
+                                <p class="breed">Puspin</p>
+                                <p class="desc">panay salubong palagi pag aakyat kami sa taas parang na ngangasar e wahaha at panay dala ng ipis sa bahay kolet mo din eh no haha.</p>
+                                <div class="meta"><b>Born:</b> May 2024 | <b>Sex:</b> Male</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h4>Mission Profile</h4>
+                            <ul class="medical-history">
+                                <li><i class="fas fa-shield-virus"></i> Immune Booster</li>
+                                <li><i class="fas fa-search"></i> Pest Control: Active</li>
+                                <li><i class="fas fa-check"></i> Deworming Complete</li>
+                                <li><i class="fas fa-heart"></i> High Stamina</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cat-card adopted" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/fluppy.jpg" alt="Mochi" class="cat-photo">
+                            <div class="card-content">
+                                <h3>Fluppy</h3>
+                                <p class="breed">Puspin</p>
+                                <p class="desc">Playful parang family nya na mga aso namin haha</p>
+                                <div class="meta"><b>Born:</b> Feb 2026 | <b>Sex:</b> Male</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h4>Health Details</h4>
+                            <ul class="medical-history">
+                                <li><i class="fas fa-baby"></i> Kitten Checkups</li>
+                                <li><i class="fas fa-dog"></i> Social Health: Excellent</li>
+                                <li><i class="fas fa-weight"></i> Weight: 1.2kg</li>
+                                <li><i class="fas fa-check-circle"></i> Basic Vaccines</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cat-card adopted" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/mochiee.jpg" alt="Mochi" class="cat-photo">
+                            <div class="card-content">
+                                <h3>Mochi</h3>
+                                <p class="breed">Siamese</p>
+                                <p class="desc">Tamik din tas parang paos hahaha.</p>
+                                <div class="meta"><b>Born:</b> Feb 2026 | <b>Sex:</b> Female</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h4>Breed Specifics</h4>
+                            <ul class="medical-history">
+                                <li><i class="fas fa-eye"></i> Eye Health: Checked</li>
+                                <li><i class="fas fa-microphone-slash"></i> Vocal Cord Check</li>
+                                <li><i class="fas fa-syringe"></i> Core Vaccinations</li>
+                                <li><i class="fas fa-info-circle"></i> Pure Siamese diet</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="#" class="social-icon facebook" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+        <p>&copy; 2026 The Feline Hierarchy | Developed by Adrian Cerenado<s/p>
+    </footer>
+
+    <script>
+        // Audio setup for Card Flip
+        const flipSound = new Audio('https://www.soundjay.com/misc/sounds/page-flip-01a.mp3');
+        flipSound.volume = 0.5; // Set volume to 50%
+
+        function flipCard(cardElement) {
+            cardElement.classList.toggle('is-flipped');
+            // Rewind sound to start and play
+            flipSound.currentTime = 0;
+            flipSound.play().catch(error => console.log("Audio play failed:", error));
+        }
+
+        let currentIndex = 1; // Start with 'More' (index 1 in a 0-4 array)
+        const featuredCats = [
+            { img: 'images/ed.jpg', title: 'solid ka din three eh no', desc: 'di nag bbless sakin to after ko sa work' },
+            { img: 'images/fam.jpg', title: 'so cute ah', desc: 'soled sa cutiness hahaha' },
+            { img: 'images/cutie.jpg', title: 'sana ol hawig si three', desc: 'hahahahah amoy pusa narin' },
+            { img: 'images/angas.jpg', title: 'lopet', desc: 'parang fpj sa angas' },
+            { img: 'images/mochiee.jpg', title: 'ganda ah', desc: 'soled ka talaga mochiee' },
+            { img: 'images/nge.jpg', title: 'hahaha kulet', desc: 'wag kana magdala ng ipis sa bahay pls haha' },
+            { img: 'images/lysing.jpg', title: 'hawig', desc: 'parang pusa yung amo hahaahaah' },
+            { img: 'images/love.jpg', title: 'sleep with mama', desc: 'heartttttt!' }
+        ];
+
+        const cards = document.querySelectorAll('.carousel-card');
+        const dots = document.querySelectorAll('.dot');
+        let slideTimer;
+
+        function updateCarousel() {
+            // Calculate indices for Left, Center (Active), and Right
+            const total = featuredCats.length;
+            const leftIdx = (currentIndex - 1 + total) % total;
+            const activeIdx = currentIndex;
+            const rightIdx = (currentIndex + 1) % total;
+
+            const indices = [leftIdx, activeIdx, rightIdx];
+
+            cards.forEach((card, i) => {
+                const cat = featuredCats[indices[i]];
+                card.querySelector('img').src = cat.img;
+                
+                // Update text only for the active card
+                const info = card.querySelector('.card-info');
+                if (card.classList.contains('active') && info) {
+                    // Reset animation state
+                    info.classList.remove('text-animate');
+                    void info.offsetWidth; // Force reflow to restart animation
+                    
+                    card.querySelector('h3').textContent = cat.title;
+                    card.querySelector('p').textContent = cat.desc;
+                    
+                    info.classList.add('text-animate');
+                }
+            });
+
+            // Update Dots
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active-dot', i === currentIndex);
+            });
+
+            // Reset Auto-play
+            clearTimeout(slideTimer);
+            slideTimer = setTimeout(() => plusSlides(1), 5000);
+        }
+
+        function plusSlides(n) {
+            currentIndex = (currentIndex + n + featuredCats.length) % featuredCats.length;
+            updateCarousel();
+        }
+
+        function currentSlide(n) {
+            currentIndex = n - 1;
+            updateCarousel();
+        }
+
+        // Swipe Support
+        let touchStartX = 0;
+        const container = document.querySelector('.carousel-container');
+        
+        container.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        container.addEventListener('touchend', e => {
+            let touchEndX = e.changedTouches[0].screenX;
+            if (touchEndX < touchStartX - 50) plusSlides(1);
+            if (touchEndX > touchStartX + 50) plusSlides(-1);
+        }, { passive: true });
+
+        // Initialize
+        updateCarousel();
+    </script>
+</body>
+</html>
